@@ -1,18 +1,18 @@
 import React from 'react';
 
-const Author = ({ author }) => {
-    const { name, profileImage, bio, summary } = author
+const Community = ({ community }) => {
+    const { name, profileImage, bio, summary } = community
 
     return (
-        <div className='bg-[#242526] p-4 my-3 rounded flex justify-between'>
+        <div className='bg-[#242526] p-3 my-3 rounded flex justify-between'>
             <div className='flex items center gap-3'>
-                <img className='h-[57px]' src={profileImage} alt='author' />
+                <img className='h-[60px]' src={profileImage} alt='author' />
                 <div>
                     <div className='flex'>
                         <p className='font-extrabold mr-1'>{name} </p>
                         <p className="text-[#bcb8b1] "> {summary.stories} stories </p>
                     </div>
-                    <p className="text-[#707070]">{bio.substring(0, 40)}....</p>
+                    <p className="text-[#707070]">{bio.substring(0, 33)}....</p>
                 </div>
             </div>
             <div className='md:flex gap-3'>
@@ -23,4 +23,4 @@ const Author = ({ author }) => {
     );
 };
 
-export default Author;
+export default Community;
